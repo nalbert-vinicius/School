@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { ModalModule } from 'ngx-bootstrap/modal';
+import { HttpClientModule } from '@angular/common/http';
+
 
 import { AppComponent } from './app.component';
 import { AlunosComponent } from './components/alunos/alunos.component';
@@ -17,11 +20,16 @@ import { RoutingRoutes } from './routing.routing';
     NavComponent,
     DashboardComponent,
     PerfilComponent,
-    TituloComponent
+    TituloComponent,
+
   ],
   imports: [
     BrowserModule,
-    RoutingRoutes
+    RoutingRoutes,
+    FormsModule,
+    ReactiveFormsModule,
+    ModalModule.forRoot(),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
