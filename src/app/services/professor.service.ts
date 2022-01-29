@@ -23,7 +23,7 @@ export class ProfessorService {
   }
 
   getByAlunoId(id: number): Observable<Professor[]> {
-    return this.http.get<Professor[]>(`${this.baseURL}/ByAluno/${id}`);
+    return this.http.get<Professor[]>(`${this.baseURL}/ByAlunoId/${id}`);
   }
 
   post(professor: Professor) {
