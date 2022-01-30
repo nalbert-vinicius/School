@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
 })
 export class ProfessoresAlunosComponent implements OnInit {
 
-  @Input() public professores: Professor[];
+  @Input() public professor: Professor[];
   @Output() closeModal = new EventEmitter();
 
   constructor(
