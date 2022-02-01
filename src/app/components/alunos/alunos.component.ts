@@ -68,9 +68,14 @@ export class AlunosComponent implements OnInit {
   criarForm() {
     this.alunoForm = this.fb.group({
       id: [0],
+      matricula: [''],
       nome: ['', Validators.required],
       sobrenome: ['', Validators.required],
-      telefone: ['', Validators.required]
+      telefone: ['', Validators.required],
+      ativo: [Boolean],
+      data_Inicio:  ['2022-02-01T00:38:00.036Z'],
+      data_Nasc: [''],
+      data_Fim: ['2022-02-01T00:38:00.036Z']
     });
   }
 
@@ -116,6 +121,7 @@ export class AlunosComponent implements OnInit {
   }
 
   alunoSelect(aluno: Aluno) {
+    debugger
     this.modeSave = 'put';
     this.alunoSelecionado = aluno;
     this.alunoForm.patchValue(aluno);

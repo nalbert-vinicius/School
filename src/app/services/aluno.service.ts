@@ -32,6 +32,7 @@ export class AlunoService {
   }
 
   put(aluno: Aluno) {
+    debugger
     return this.http.put(`${this.baseURL}/${aluno.id}`, aluno);
   }
 
